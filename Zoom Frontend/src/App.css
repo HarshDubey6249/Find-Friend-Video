@@ -1,0 +1,202 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* =========================
+   Landing Page
+========================= */
+
+.landingPageContainer {
+  width: 100%;
+  min-height: 100vh;
+  background: url("/background.png") no-repeat center center/cover;
+  color: white;
+}
+
+/* =========================
+   Navbar
+========================= */
+
+.landingPageContainer nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+}
+
+.navHeader h2 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.navList {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.navList p {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.navList p:hover {
+  color: orange;
+}
+
+.loginBtn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background: #4f46e5;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.loginBtn:hover {
+  background: #3730a3;
+}
+
+/* =========================
+   Main Section
+========================= */
+
+.landingMainContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 60px;
+  min-height: calc(100vh - 90px);
+}
+
+/* Left Section */
+
+.landingMainContainer > div:first-child {
+  max-width: 600px;
+}
+
+.landingMainContainer h1 {
+  font-size: 3.5rem;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.landingMainContainer p {
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+  color: #f1f1f1;
+}
+
+/* Get Started Button */
+
+.getStartedBtn {
+  display: inline-block;
+  margin-top: 25px;
+}
+
+.getStartedBtn a {
+  display: inline-block;
+  background: linear-gradient(135deg, #ff9800, #ff6f00);
+  color: white;
+  text-decoration: none;
+  padding: 14px 32px;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(255, 152, 0, 0.4);
+}
+
+.getStartedBtn a:hover {
+  background: linear-gradient(135deg, #ffb300, #ff8f00);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(255, 152, 0, 0.6);
+}
+
+.getStartedBtn a:active {
+  transform: scale(0.98);
+}
+/* Right Section */
+
+.landingMainContainer > div:last-child {
+  display: flex;
+  justify-content: center;
+}
+
+.landingMainContainer > div:last-child img {
+  max-height: 75vh;
+  width: auto;
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 992px) {
+  .landingMainContainer {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .landingMainContainer h1 {
+    font-size: 2.8rem;
+  }
+
+  .landingMainContainer p {
+    font-size: 1.1rem;
+  }
+
+  .landingMainContainer > div:last-child img {
+    max-height: 50vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .landingPageContainer nav {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .navList {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .landingMainContainer {
+    padding: 30px 20px;
+  }
+
+  .landingMainContainer h1 {
+    font-size: 2.2rem;
+  }
+
+  .landingMainContainer p {
+    font-size: 1rem;
+  }
+
+  .getStartedBtn {
+    padding: 12px 25px;
+  }
+
+  .getStartedBtn a {
+    font-size: 1rem;
+  }
+
+  .landingMainContainer > div:last-child img {
+    max-width: 90%;
+    height: auto;
+  }
+}
