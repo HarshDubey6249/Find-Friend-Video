@@ -24,10 +24,11 @@ function LandingPage() {
             with your loved ones
           </h1>
 
-          <p>Connect with anyone, anywhere using Apna Video Call.</p>
+          <p>Connect with anycd fro 
+            one, anywhere using Apna Video Call.</p>
 
           <div className="getStartedBtn">
-            <Link to="/home">Get Started</Link>
+            <Link to="/auth">Get Started</Link>
           </div>
         </div>
 
